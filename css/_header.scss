@@ -1,0 +1,54 @@
+header {
+    min-height: 580px;
+    width: 100%;
+    background: linear-gradient($yellow 50%, white 50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: $gap;
+    padding: $padd-tb var(--padd-lr);
+
+    > figure {
+        width: 20vw;
+        height: 300px;
+        transition: $tran;
+        overflow: hidden;
+        position: relative;
+        border-radius: 5px;
+        
+        > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: $tran;
+        }
+
+        > figcaption {
+            width: 100%;
+            height: 50px;
+            background-color: $yellow;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -50px;
+            opacity: 0;
+            transition: $tran;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 500;
+        }
+    }
+    
+    > figure:hover {
+        > figcaption {
+            bottom: 0;
+            opacity: .75;
+        }
+
+        > img {
+            transform: scale(2.5);
+        }
+    }
+}

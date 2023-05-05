@@ -1,0 +1,52 @@
+@media (max-width:575.998px) {
+    header {
+        flex-wrap: wrap;
+
+        > figure {
+            flex-basis: 100% !important;
+        }
+    }
+}
+@media (max-width:992px) {
+    header {
+        > figure {
+            flex-basis: 45%;
+        }
+    }
+}
+@media (max-width:1279.998px) {
+    footer {
+        flex-wrap: wrap;
+    }
+}
+@media (min-width:992px) {
+    :root {
+        --padd-lr: 10vw;
+    }
+    header {
+        > figure {
+            height: 450px;
+            width: 17vw;
+        }
+    }
+}
+@media (min-width:576px) {
+    header {
+        > figure:nth-child(even) {
+            top: 70px;
+        }
+    }
+}
+@media (min-width:1280px) {
+    :root {
+        --padd-lr: 20vw;
+    }
+    header {
+        > figure:hover {
+            > img {
+                transform: scale(2.5) rotate(45deg);
+                filter: blur(1px);
+            }
+        }
+    }
+}
